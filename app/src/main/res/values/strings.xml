@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">android-refresh-token-example</string>
+    <string name="error_email_not_valid">Email tidak valid</string>
+    <string name="error_password_not_valid">Password tidak valid. Minimum 8 karakter</string>
+    <string name="error_name_not_valid">Nama tidak valid</string>
+</resources>

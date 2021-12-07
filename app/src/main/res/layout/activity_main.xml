@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/button_view"
+            android:text="Lohat isi shared pref sekarang"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_name"/>
+        <TextView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_email"/>
+
+        <TextView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_access_token_expired"/>
+
+
+        <TextView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_refresh_token_expired"/>
+
+        <TextView
+            android:text="\nData di atas adalah data diambil dr login (shared pref).\nKalau generate new access token dipanggil, harusnya access_token dan access_token_expired_at akan berubah. Perhatikan ekornya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:text="Trigger Fetch profile"
+            android:id="@+id/button_fetch_profile"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="INGFO:\nSaat access token belum kedaluwarsa, fetch profile will OK.\nSaat access token kedaluwarsa tapi REFRESH tokennya belum, maka dia akan coba generate access token lagi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="\nIngat. Saat dapet access token baru, REFRESH token masih pake yg lama. Mekanisme ini tergantung BE nya aja sih. preferensi masing\nJadi pasti suatu saat refresh token akan kedaluwarsa juga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="\nSaat access token DAN refresh tokennya expired. Maka aplikasi force logout. (Sesi berakhir)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:id="@+id/button_logout"
+            android:text="logout"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

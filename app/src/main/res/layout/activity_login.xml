@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:text="Login"
+            android:textSize="28sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:id="@+id/input_email"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Email"
+                android:id="@+id/edit_text_email"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:id="@+id/input_password"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Password"
+                android:id="@+id/edit_text_password"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:text="login"
+            android:id="@+id/button_login"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:text="register"
+            android:id="@+id/button_register"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</ScrollView>
